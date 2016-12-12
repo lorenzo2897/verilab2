@@ -62,3 +62,7 @@ We compiled the project and programmed the DE1 board. It works!
 ### Propagation delays
 
 We created two different report datasheets: `Slow 1100mV 0C Model` and `Slow 1100mV 85C Model`
+
+[0°C](p1_step11_0c.pdf)
+
+[85°C](p1_step11_85c.pdf)
