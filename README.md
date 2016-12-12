@@ -2,7 +2,7 @@
 
 ## Part 1 - Schematic to Verilog
 
-[Experiment 1: Schematic 7-segment display]()
+[Experiment 1: Schematic 7-segment display](part1/ex1.md)
 
 [Experiment 2: Verilog 7-segment display]()
 
