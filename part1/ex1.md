@@ -71,4 +71,16 @@ These tables analyse the worst-case times taken for the output pins to adjust in
 
 Input Port | Output Port | RR    |  RF   |  FR   |  FF
 -----------|-------------|-------|-------|-------|------
-SW[0]      | HEX0[0]     | 8.320 | 8.547 | 8.579 | 8.814
+SW[2]      | HEX0[4]     | 8.937 | 9.396 | 9.217 | 9.729
+
+shows the rise and fall times of the output pin `HEX0[4]` given a change in the value of `SW[2]`.
+
+When `SW[2]` rises, it takes `HEX0[4]` at most 8.937ns to rise, or at most 9.396ns to fall.
+
+Some entries in the table are left blank. For example:
+
+Input Port | Output Port | RR    |  RF   |  FR   |  FF
+-----------|-------------|-------|-------|-------|------
+SW[1]      | HEX0[4]     |       | 8.800 | 8.684 |
+
+This is because, in this case, due to the logic path of `SW[1]` to `HEX0[4]`, there is no occasion in which a rise in `SW[1]` will cause a rise in `HEX0[4]`. In other words, `HEX0[4]` is always equal to `NOT SW[1]`
