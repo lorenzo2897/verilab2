@@ -57,8 +57,8 @@ We assigned pins manually to `HEX[6..0]` and `SW[3..0]` using the Pin Planner.
 
 We compiled the project and programmed the DE1 board. It works!
 
-![sample switches to hex](../images/p1_s10.png)
+![sample switches to hex](../images/p1_s10.jpg)
 
 ### Propagation delays
 
-We created two different report datasheets, one for 
+We created two different report datasheets: `Slow 1100mV 0C Model` and `Slow 1100mV 85C Model`
