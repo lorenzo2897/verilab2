@@ -86,3 +86,9 @@ SW[1]      | HEX0[4]     |       | 8.800 | 8.684 |
 This is because, in this case, due to the logic path of `SW[1]` to `HEX0[4]`, there is no occasion in which a rise in `SW[1]` will cause a rise in `HEX0[4]`. In other words, `HEX0[4]` is always equal to `NOT SW[1]`. In fact, we can see this in the schematic we designed earlier!
 
 ![highlighted path from sw1 to hex04](../images/p1_s11_highlighted.png)
+
+### Temperature coefficients
+
+Let us now compare the tables for temperatures of 0°C and 85°C. We notice that their structure is basically the same. They both show times for RR/FF/FR/RF, and have blank cells in the same places. The difference, however, is that values for the 85°C model tend to be higher than the one for 0°C.
+
+This is to be expected as integrated circuits work better when cooler, due to e.g. the resistance of wires increasing with temperature. This is not always the case, and depends on the combination of temperature coefficients of the various components in the circuit.
