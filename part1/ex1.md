@@ -70,4 +70,5 @@ We created two different report datasheets: `Slow 1100mV 0C Model` and `Slow 110
 These tables analyse the worst-case times taken for the output pins to adjust in response to a change on the input pins, at temperatures of 0 and 85 degrees Celsius. For example, the following line:
 
 Input Port | Output Port | RR    |  RF   |  FR   |  FF
+-----------|-------------|-------|-------|-------|------
 SW[0]      | HEX0[0]     | 8.320 | 8.547 | 8.579 | 8.814
