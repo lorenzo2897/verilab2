@@ -1,1 +1,2 @@
-# verilab
+# VERI lab logbook
+
