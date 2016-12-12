@@ -83,4 +83,6 @@ Input Port | Output Port | RR    |  RF   |  FR   |  FF
 -----------|-------------|-------|-------|-------|------
 SW[1]      | HEX0[4]     |       | 8.800 | 8.684 |
 
-This is because, in this case, due to the logic path of `SW[1]` to `HEX0[4]`, there is no occasion in which a rise in `SW[1]` will cause a rise in `HEX0[4]`. In other words, `HEX0[4]` is always equal to `NOT SW[1]`
+This is because, in this case, due to the logic path of `SW[1]` to `HEX0[4]`, there is no occasion in which a rise in `SW[1]` will cause a rise in `HEX0[4]`. In other words, `HEX0[4]` is always equal to `NOT SW[1]`. In fact, we can see this in the schematic we designed earlier!
+
+![highlighted path from sw1 to hex04](../images/p1_s11_highlighted.png)
