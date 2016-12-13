@@ -51,3 +51,54 @@ module bin2bcd10 (B, BCD_0, BCD_1, BCD_2, BCD_3);
 
 endmodule
 ```
+(we also wrote our version of add3_ge5 for this purpose)
+```verilog
+module add3_ge5 (w, a);
+	input [3:0] w;
+	output [3:0] a;
+	
+	assign a = (w >= 5) ? w + 3 : w;
+endmodule
+```
+
+### Implementing the bin2bcd module
+
+The BCD version of ex4_top.v was very similar again to the previous one, but this time declaring additonal wires and feeding the inputs through the Binary>BCD converter before outputting the 7-segment display values.
+
+```verilog
+module ex4_top(SW, HEX0, HEX1, HEX2, HEX3);
+
+	input [9:0] SW;
+	output [6:0] HEX0;
+	output [6:0] HEX1;
+	output [6:0] HEX2;
+	output [6:0] HEX3;
+
+	wire [3:0] D0;
+	wire [3:0] D1;
+	wire [3:0] D2;
+	wire [3:0] D3;
+
+	bin2bcd10 BINBCD(SW, D0, D1, D2, D3);
+
+	hex_to_7seg SEG0(HEX0, D0);
+	hex_to_7seg SEG1(HEX1, D1);
+	hex_to_7seg SEG2(HEX2, D2);
+	hex_to_7seg SEG3(HEX3, D3);
+
+endmodule
+```
+
+### Testing the 10-bit binary to BCD converter
+
+We sent the design to the board to test it. It worked properly, and we recorded the following values for resource usage.
+
+### Using a 16-bit bin2bcd converter
+
+We then downloaded a 16-bit binary to BCD converter from the experiment website, and replaced the line in our top-level design with
+```verilog
+bin2bcd_16 BINBCD({6'b0, SW}, D0, D1, D2, D3);
+```
+This version worked in exactly the same way as the previous one, and furthermore the resources used were the same as the 10-bit version!
+
+Quartus optimises the design to remove unused logic elements, which means it is much better to re-use more generic-purpose modules in multiple places rather than having many modules with different bit widths. This will reduce bugs, makes code more reusable, and does not have any impact on performance on the chip.
