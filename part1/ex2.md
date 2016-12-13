@@ -46,4 +46,5 @@ Being able to re-use pin assignments in every project instead of having to assig
 
 ### Testing the design
 
+We used the code provided in the lab booklet for the top-level file `ex2_top.v`.
 We tested the new Verilog design on the FPGA and it worked as expected.
