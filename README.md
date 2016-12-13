@@ -12,6 +12,14 @@
 
 ## Part 2
 
+[Experiment 5: Designing and testing an 8-bit counter](part2/ex5.md)
+
+[Experiment 6: Implementing a 16-bit counter](part2/ex6.md)
+
+[Experiment 7: Shift register and PRBS](part2/ex7.md)
+
+[Experiment 8: Starting line delay circuit](part2/ex8.md)
+
 ## Part 3
 
 ## Part 4
