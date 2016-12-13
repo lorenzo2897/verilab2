@@ -92,3 +92,7 @@ This is because, in this case, due to the logic path of `SW[1]` to `HEX0[4]`, th
 Let us now compare the tables for temperatures of 0°C and 85°C. We notice that their structure is basically the same. They both show times for RR/FF/FR/RF, and have blank cells in the same places. The difference, however, is that values for the 85°C model tend to be higher than the one for 0°C.
 
 This is to be expected as integrated circuits work better when cooler, due to e.g. the resistance of wires increasing with temperature. This is not always the case, and depends on the combination of temperature coefficients of the various components in the circuit.
+
+### Resources used
+
+We can see that this design does not use any registers or memory blocks -- of course, it was a simple stateless combinatorial circuit for converting between binary and hex.
