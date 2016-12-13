@@ -10,7 +10,7 @@
 
 [Experiment 4: 10-bit switches to BCD](part1/ex4.md)
 
-## Part 2
+## Part 2 - Finite state machines
 
 [Experiment 5: Designing and testing an 8-bit counter](part2/ex5.md)
 
@@ -20,6 +20,18 @@
 
 [Experiment 8: Starting line delay circuit](part2/ex8.md)
 
-## Part 3
+[Experiment 9: Reaction meter](part2/ex9.md)
 
-## Part 4
+## Part 3 - The add-on card
+
+[Experiment 10: Interface with the DAC](part3/ex10.md)
+
+[Experiment 11: Pulse width modulation](part3/ex11.md)
+
+[Experiment 12: Sine wave table in ROM](part3/ex12.md)
+
+[Experiment 13: Fixed frequency sine wave generator](part3/ex13.md)
+
+[Experiment 14: Variable sine wave generator](part3/ex14.md)
+
+## Part 4 - Audio signal processing
