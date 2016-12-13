@@ -62,4 +62,7 @@ This file acts as a primitive testbench to test our counter:
 - Runs the counter for 5 cycles
 
 We obtained the following waveform:
-![counter 300ns waveform](../images/p2_s5_wave.png)
+
+![counter 300ns waveform](../images/p2_s5_wave.PNG)
+
+We can see that the module counted up from zero for 5 cycles, then remained on 5 while enable was `low`, and then counted up to 10 (0x0A in hex) in the remaining 5 cycles.
