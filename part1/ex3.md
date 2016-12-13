@@ -5,7 +5,7 @@ The task was to create a design to display all 10-bit sliding switches as hexade
 Expanding upon the code from experiment 2, we linked the second and third 7-segment displays to the appropriate switches, through the hex_to_7seg module.
 
 ```verilog
-module ex2_top(SW, HEX0, HEX1, HEX2);
+module ex3_top(SW, HEX0, HEX1, HEX2);
 
 	input [9:0] SW;
 	output [6:0] HEX0;
