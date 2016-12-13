@@ -66,3 +66,7 @@ We obtained the following waveform:
 ![counter 300ns waveform](../images/p2_s5_wave.PNG)
 
 We can see that the module counted up from zero for 5 cycles, then remained on 5 while enable was `low`, and then counted up to 10 (0x0A in hex) in the remaining 5 cycles.
+
+### Single-stepping through the code
+
+As we repeated the simulation, single-stepping through the Verilog code, we could see the count being updated every time the line `count <= count + 1'b1` was called. In contrast, when enable was deasserted, execution would skip over that line when it reached the `if(enable == 1'b1)` statement.
