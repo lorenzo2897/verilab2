@@ -35,3 +35,11 @@
 [Experiment 14: Variable sine wave generator](part3/ex14.md)
 
 ## Part 4 - Audio signal processing
+
+[Experiment 16: All-pass loop](part4/ex16.md)
+
+[Experiment 17: Echo synthesiser with single echo](part4/ex17.md)
+
+[Experiment 18: Multiple echoes](part4/ex18.md)
+
+[Experiment 19: Echo synthesiser with variable delay](part4/ex19.md)
