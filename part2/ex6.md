@@ -116,6 +116,15 @@ Having unconstrained paths means that some paths do not have timing constraints 
 
 ### Resources used
 
+Resource			| Value
+------------------------------- | ------------
+Logic utilization (in ALMs)	| 102 / 32,070 ( < 1 % )
+Total registers			| 37
+Total pins			| 38 / 457 ( 8 % )
+Total block memory bits		| 0 / 4,065,280 ( 0 % )
+
+This time, we are using several registers to hold the value of the counter, as opposed to when we analysed the 7-segment decoder resources, because this is a stateful machine.
+
 ### Testing on the DE1
 
 The design worked on the FPGA, after resolving some confusion with active-high and active-low signals.
