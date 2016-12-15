@@ -96,3 +96,10 @@ This is to be expected as integrated circuits work better when cooler, due to e.
 ### Resources used
 
 We can see that this design does not use any registers or memory blocks -- of course, it was a simple stateless combinatorial circuit for converting between binary and hex.
+
+Resource               | Usage
+-----------------------|-----------
+Adaptive logic modules | 4 / 32,070
+I/O Pins               | 11 / 457
+Registers              | 0
+Block memory bits      | 0
