@@ -1,0 +1,70 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do ex6_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_2/ex6 {H:/VERI/part_2/ex6/counter_16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_16
+# 
+# Top level modules:
+# 	counter_16
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_1/mylib {H:/VERI/part_1/mylib/hex_to_7seg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module hex_to_7seg
+# 
+# Top level modules:
+# 	hex_to_7seg
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_1/mylib {H:/VERI/part_1/mylib/bin2bcd_16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bin2bcd_16
+# 
+# Top level modules:
+# 	bin2bcd_16
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_1/mylib {H:/VERI/part_1/mylib/add3_ge5.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module add3_ge5
+# 
+# Top level modules:
+# 	add3_ge5
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_2/ex6 {H:/VERI/part_2/ex6/ex6_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex6_top
+# 
+# Top level modules:
+# 	ex6_top
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_1/mylib {H:/VERI/part_1/mylib/clockdiv_50000.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clockdiv_50000
+# 
+# Top level modules:
+# 	clockdiv_50000
+# 
+vsim work.ex6_top
+# vsim work.ex6_top 
+# Loading work.ex6_top
+# Loading work.clockdiv_50000
+# Loading work.counter_16
+# Loading work.bin2bcd_16
+# Loading work.add3_ge5
+# Loading work.hex_to_7seg
+force CLOCK_50 0 0, 1 10ns -repeat 20ns
+add wave CLOCK_50 clkout counter_en count BCD_0
+run 10000000ns
+force KEY[0] = 1
+# invalid command name "0"
+force KEY[0] 1
+# invalid command name "0"
+force KEY0 1
+# ** Error: (vish-4008) Object 'KEY0' not found.
+# 
+force KEY 0
+run 10000000ns

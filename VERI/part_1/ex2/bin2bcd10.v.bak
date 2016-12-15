@@ -1,0 +1,11 @@
+module bin2bcd10 (B, BCD_0, BCD_1, BCD_2, BCD_3);
+
+	input [9:0] B;
+	output [3:0] BCD_0, BCD_1, BCD_2, BCD_3;
+	
+	wire [3:0] w1, w2, w3, w4, w5, w6, w7, w8, w9;
+	wire [3:0] a1, a2, a3, a4, a5, a6, a7, a8, a9;
+	
+	
+
+endmodule

@@ -1,0 +1,9 @@
+module clockdiv(clkin, clkout);
+
+	input clkin;
+	output clkout;
+	
+	
+
+endmodule
+

@@ -1,0 +1,44 @@
+module processor19 (CLOCK_50, data_in, data_out, data_valid, SW, HEX0, HEX1, HEX2, HEX3);
+
+input [8:0] SW;
+input CLOCK_50;
+input [9:0] data_valid;
+
+output [9:0] data_out;
+output [6:0] HEX0, HEX1, HEX2, HEX3;
+
+wire sysclk;
+wire [12:0] rd_addr;
+wire [12:0] wd_addr;
+wire wren;
+wire [9:0] x, y;
+wire signed [8:0] q;
+
+reg [9:0] data_out;
+
+assign wdaddr = {SW[8:0],0,0,0,0} + rd_addr; //assign used as we have 'summation'
+
+counter_13 counter13 (data_valid, rd_addr);
+pulse_gen pulse(enable, data_valid, clock);
+RAM ram0 (rd_addr, y[9:1], wd_addr, wren, 9[8:0]);
+
+sw2_7seg out_sw2_7seg (SW, HEX0, HEX1, HEX2, HEX3);
+
+parameter ADC_OFFSET = 10'h181;
+parameter DAC_OFFSET = 10'h200;
+
+
+assign x = data_in - ADC_OFFSET; // x is now in 2's complement since data_in was binary offset
+
+assign y = x - {q[8], q[8:1]}; 
+
+always @ (posedge clock)
+begin
+
+data_out <= y + DAC_OFFSET;
+
+end 
+
+endmodule;
+
+

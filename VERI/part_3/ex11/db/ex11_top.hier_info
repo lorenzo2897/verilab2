@@ -1,0 +1,110 @@
+|ex11_top
+SW[0] => SW_in[0].DATAIN
+SW[1] => SW_in[1].DATAIN
+SW[2] => SW_in[2].DATAIN
+SW[3] => SW_in[3].DATAIN
+SW[4] => SW_in[4].DATAIN
+SW[5] => SW_in[5].DATAIN
+SW[6] => SW_in[6].DATAIN
+SW[7] => SW_in[7].DATAIN
+SW[8] => SW_in[8].DATAIN
+SW[9] => SW_in[9].DATAIN
+CLOCK_50 => CLOCK_50.IN3
+DAC_CS <= spi2dac:DAC.port4
+DAC_SDI <= spi2dac:DAC.port3
+DAC_LD <= spi2dac:DAC.port6
+DAC_SCK <= spi2dac:DAC.port5
+PWM_OUT <= pwm:PWM.port3
+
+
+|ex11_top|clockdiv_5000:CLKDIV
+clkin => count[0].CLK
+clkin => count[1].CLK
+clkin => count[2].CLK
+clkin => count[3].CLK
+clkin => count[4].CLK
+clkin => count[5].CLK
+clkin => count[6].CLK
+clkin => count[7].CLK
+clkin => count[8].CLK
+clkin => count[9].CLK
+clkin => count[10].CLK
+clkin => count[11].CLK
+clkin => count[12].CLK
+clkin => count[13].CLK
+clkin => count[14].CLK
+clkout <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex11_top|spi2dac:DAC
+sysclk => clk_1MHz.CLK
+sysclk => ctr[0].CLK
+sysclk => ctr[1].CLK
+sysclk => ctr[2].CLK
+sysclk => ctr[3].CLK
+sysclk => ctr[4].CLK
+sysclk => sr_state~4.DATAIN
+data_in[0] => shift_reg.DATAB
+data_in[1] => shift_reg.DATAB
+data_in[2] => shift_reg.DATAB
+data_in[3] => shift_reg.DATAB
+data_in[4] => shift_reg.DATAB
+data_in[5] => shift_reg.DATAB
+data_in[6] => shift_reg.DATAB
+data_in[7] => shift_reg.DATAB
+data_in[8] => shift_reg.DATAB
+data_in[9] => shift_reg.DATAB
+load => sr_state.OUTPUTSELECT
+load => sr_state.OUTPUTSELECT
+load => sr_state.OUTPUTSELECT
+dac_sdi <= shift_reg[15].DB_MAX_OUTPUT_PORT_TYPE
+dac_cs <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+dac_sck <= dac_sck.DB_MAX_OUTPUT_PORT_TYPE
+dac_ld <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex11_top|pwm:PWM
+clk => pwm_out~reg0.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => d[0].CLK
+clk => d[1].CLK
+clk => d[2].CLK
+clk => d[3].CLK
+clk => d[4].CLK
+clk => d[5].CLK
+clk => d[6].CLK
+clk => d[7].CLK
+clk => d[8].CLK
+clk => d[9].CLK
+data_in[0] => d[0].DATAIN
+data_in[1] => d[1].DATAIN
+data_in[2] => d[2].DATAIN
+data_in[3] => d[3].DATAIN
+data_in[4] => d[4].DATAIN
+data_in[5] => d[5].DATAIN
+data_in[6] => d[6].DATAIN
+data_in[7] => d[7].DATAIN
+data_in[8] => d[8].DATAIN
+data_in[9] => d[9].DATAIN
+load => d[0].ENA
+load => d[1].ENA
+load => d[2].ENA
+load => d[3].ENA
+load => d[4].ENA
+load => d[5].ENA
+load => d[6].ENA
+load => d[7].ENA
+load => d[8].ENA
+load => d[9].ENA
+pwm_out <= pwm_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
