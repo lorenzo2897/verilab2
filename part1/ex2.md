@@ -31,17 +31,6 @@ module hex_to_7seg(out, in);
 endmodule
 ```
 
-We used this top-level code in Verilog instead of a schematic:
-
-```verilog
-module ex2_top(SW, HEX0);
-	input [3:0] SW;
-	output [6:0] HEX0;
-	
-	hex_to_7seg SEG0 (HEX0, SW);
-endmodule
-```
-
 ### Pin assignment
 
 Instead of manually assigning pins through the Pin Planner, we discovered it was possible to achieve the same result by pasting a list of pin assignments in text format in the .qsf file of the project. Pin assignments looked something like this
@@ -57,5 +46,15 @@ Being able to re-use pin assignments in every project instead of having to assig
 
 ### Testing the design
 
-We used the code provided in the lab booklet for the top-level file `ex2_top.v`.
+We used the code provided in the lab booklet for the top-level file `ex2_top.v`, instead of a graphical schematic.
+
+```verilog
+module ex2_top(SW, HEX0);
+	input [3:0] SW;
+	output [6:0] HEX0;
+	
+	hex_to_7seg SEG0 (HEX0, SW);
+endmodule
+```
+
 We tested the new Verilog design on the FPGA and it worked as expected.
