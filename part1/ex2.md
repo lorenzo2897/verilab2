@@ -31,6 +31,17 @@ module hex_to_7seg(out, in);
 endmodule
 ```
 
+We used this top-level code in Verilog instead of a schematic:
+
+```verilog
+module ex2_top(SW, HEX0);
+	input [3:0] SW;
+	output [6:0] HEX0;
+	
+	hex_to_7seg SEG0 (HEX0, SW);
+endmodule
+```
+
 ### Pin assignment
 
 Instead of manually assigning pins through the Pin Planner, we discovered it was possible to achieve the same result by pasting a list of pin assignments in text format in the .qsf file of the project. Pin assignments looked something like this
