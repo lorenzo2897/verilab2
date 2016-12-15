@@ -80,6 +80,8 @@ After compiling and before testing on the board, we analysed certain parameters 
 
 #### Frequency
 
+We know that Fmax = `1 / (time from clock to output + propagation time + setup time)`
+
 Model temperature | Maximum frequency
 ------------------|------------------
 0 °C              | 422.12 MHz
