@@ -18,10 +18,6 @@
 
 [Experiment 7: Shift register and PRBS](part2/ex7.md)
 
-[Experiment 8: Starting line delay circuit]
-
-[Experiment 9: Reaction meter]
-
 ## Part 3 - The add-on card
 
 [Experiment 10: Interface with the DAC](part3/ex10.md)
@@ -31,8 +27,6 @@
 [Experiment 12: Sine wave table in ROM](part3/ex12.md)
 
 [Experiment 13: Fixed frequency sine wave generator](part3/ex13.md)
-
-[Experiment 14: Variable sine wave generator]
 
 ## Part 4 - Audio signal processing
 
