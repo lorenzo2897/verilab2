@@ -130,3 +130,28 @@ This time, we are using several registers to hold the value of the counter, as o
 ### Testing on the DE1
 
 The design worked on the FPGA, after resolving some confusion with active-high and active-low signals.
+
+## Cascade counter
+
+For this subtask, we added a clock divider to slow down the 50 MHz clock to 1kHz, so that it would be easier to see the changes. This module sends a short pulse ever 50 thousand clock cycles.
+
+```verilog
+module clockdiv_50000(clkin, clkout);
+
+	input clkin;
+	output clkout;
+	
+	reg [20:0] count;
+	
+	initial count = 0;
+	
+	assign clkout = count==0 ? 1 : 0;
+	
+	always @(posedge clkin) begin
+		count = count + 1;
+		if (count == 50000)
+			count = 0;
+	end
+
+endmodule
+```
