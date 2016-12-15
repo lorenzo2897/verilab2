@@ -91,7 +91,7 @@ endmodule
 
 ### Testing the 10-bit binary to BCD converter
 
-We sent the design to the board to test it. It worked properly, and we recorded the following values for resource usage.
+We sent the design to the board to test it. It worked properly.
 
 ### Using a 16-bit bin2bcd converter
 
